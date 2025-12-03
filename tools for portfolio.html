@@ -153,24 +153,26 @@
       font-size: 12px;
     }
 
-    /* Section README */
-    #readme {
+    /* Section Documentation */
+    #documentation {
       background: #f9f9f9;
       padding: 20px;
       border-top: 2px solid var(--bleu);
+      text-align: center;
     }
 
-    #readme h2 {
-      text-transform: uppercase;
-      color: var(--bleu);
-      margin-bottom: 15px;
-    }
-
-    #readme pre {
-      background: #eee;
-      padding: 15px;
+    #documentation a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--bleu);
+      color: #fff;
+      text-decoration: none;
       border-radius: 5px;
-      overflow-x: auto;
+      transition: background 0.3s ease;
+    }
+
+    #documentation a:hover {
+      background: #046a94;
     }
 
     @media (max-width: 750px) {
@@ -218,7 +220,7 @@
           <li><a href="#about">À propos</a></li>
           <li><a href="#projects">Projets</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#readme">README</a></li>
+          <li><a href="#documentation">Documentation</a></li>
         </ul>
       </nav>
     </header>
@@ -262,52 +264,11 @@
       </section>
     </main>
 
-    <!-- Section README ajoutée -->
-    <section id="readme">
-      <h2>README.md</h2>
-      <pre>
-# Mon Portfolio
-
-Bienvenue sur le dépôt de mon portfolio personnel ! Ce site web est conçu pour présenter mes compétences, mes projets et me permettre d'être contacté.
-
-## Table des matières
-- À propos
-- Fonctionnalités
-- Technologies Utilisées
-- Installation et Utilisation
-- Structure du Projet
-- Contribution
-- Licence
-
-## À propos
-Je suis un étudiant en première année à Guardia Cybersecurity Schools, passionné par la création de sites web modernes et interactifs. Ce portfolio est une vitrine de mes travaux et de mon parcours.
-
-## Fonctionnalités
-- Page d'accueil simple et épurée
-- Section "À propos de moi"
-- Section "Mes Projets"
-- Section "Contactez-moi"
-- Navigation intuitive
-- Design Responsive
-
-## Technologies Utilisées
-- HTML5
-- CSS3
-
-## Installation et Utilisation
-Cloner le dépôt puis ouvrir index.html dans un navigateur.
-
-## Structure du Projet
-- index.html
-- styles.css
-- README.md
-
-## Contribution
-Les contributions sont les bienvenues !
-
-## Licence
-Projet sous licence MIT.
-      </pre>
+    <!-- Section Documentation -->
+    <section id="documentation">
+      <h2>Documentation</h2>
+      <p>Pour en savoir plus sur ce projet, consultez la documentation complète :</p>
+      <a href="docs/README.md" target="_blank">Voir le README</a>
     </section>
 
     <footer>
