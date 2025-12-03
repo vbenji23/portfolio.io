@@ -7,48 +7,6 @@
   <meta name="author" content="Benjamin Vincenti">
 
   <style>
-    /**********************
-       RESET CSS
-    **********************/
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
-    article, aside, details, figcaption, figure, 
-    footer, header, hgroup, menu, nav, section {
-      display: block;
-    }
-    body {
-      line-height: 1;
-      background: #fff;
-    }
-    ol, ul {
-      list-style: none;
-    }
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-
-    /**********************
-       Variables
-    **********************/
     :root {
       --grisC: #cacaca;
       --gris7: #8a8a8a;
@@ -58,33 +16,24 @@
       --bgNoir: #111;
     }
 
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--grisC);
+      margin: 0;
+      padding: 0;
+    }
+
     .container {
       width: 90%;
       max-width: 900px;
       margin: 0 auto;
-    }
-
-    /**********************
-       Structure générale
-    **********************/
-    html {
-      background: var(--grisC);
-      min-width: 100vw;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      border: 1px solid var(--border);
       background: #fff;
-      margin: 5vh auto;
+      border: 1px solid var(--border);
       border-radius: 5px;
       box-shadow: 0px 5px 50px var(--gris7);
+      overflow: hidden;
     }
 
-    /**********************
-       Header
-    **********************/
     header {
       background: var(--bgNoir);
       color: #fff;
@@ -94,6 +43,9 @@
     header ul {
       display: grid;
       grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
     header ul li {
@@ -130,6 +82,8 @@
     nav ul {
       text-align: center;
       margin-top: 10px;
+      list-style: none;
+      padding: 0;
     }
 
     nav ul li {
@@ -140,15 +94,13 @@
     nav ul li a {
       color: #fff;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
-      text-decoration: underline;
+      color: var(--bleu);
     }
 
-    /**********************
-       Main
-    **********************/
     main {
       display: grid;
       grid-template-columns: 2fr 5fr;
@@ -172,6 +124,10 @@
       line-height: 1.4;
     }
 
+    section {
+      padding: 20px;
+    }
+
     section article {
       border-top: 1px solid #cecece;
       margin-bottom: 30px;
@@ -189,9 +145,6 @@
       line-height: 1.4;
     }
 
-    /**********************
-       Footer
-    **********************/
     footer {
       background: var(--bgNoir);
       color: #fff;
@@ -200,9 +153,26 @@
       font-size: 12px;
     }
 
-    /**********************
-       Media Queries
-    **********************/
+    /* Section README */
+    #readme {
+      background: #f9f9f9;
+      padding: 20px;
+      border-top: 2px solid var(--bleu);
+    }
+
+    #readme h2 {
+      text-transform: uppercase;
+      color: var(--bleu);
+      margin-bottom: 15px;
+    }
+
+    #readme pre {
+      background: #eee;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
     @media (max-width: 750px) {
       main {
         grid-template-columns: 1fr;
@@ -219,85 +189,130 @@
   </style>
 </head>
 <body>
-  <header>
-    <ul class="container">
-      <li>
-        <h1>
-          <span id="prenom">Benjamin</span>
-          <span id="nom">Vincenti</span>
-        </h1>
-      </li>
-      <li>
-        <strong>Adresse</strong>
-        20 rue de Bonn, Chatou 78400
-      </li>
-      <li>
-        <strong>Téléphone</strong>
-        06.10.39.27.44
-      </li>
-      <li>
-        <strong>Mail</strong>
-        vincentibenjamin2308@gmail.com<br>
-        bvincenti@guardiaschool.fr
-      </li>
-    </ul>
-    <h1>Bienvenue sur mon Portfolio</h1>
-    <nav>
+  <div class="container">
+    <header>
       <ul>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <h1>
+            <span id="prenom">Benjamin</span>
+            <span id="nom">Vincenti</span>
+          </h1>
+        </li>
+        <li>
+          <strong>Adresse</strong>
+          20 rue de Bonn, Chatou 78400
+        </li>
+        <li>
+          <strong>Téléphone</strong>
+          06.10.39.27.44
+        </li>
+        <li>
+          <strong>Mail</strong>
+          vincentibenjamin2308@gmail.com<br>
+          bvincenti@guardiaschool.fr
+        </li>
       </ul>
-    </nav>
-  </header>
-
-  <main class="container">
-    <aside>
-      <article>
-        <h2>Langues</h2>
-        <p>Français</p>
-      </article>
-      <article>
-        <h2>Centres d’intérêt</h2>
+      <h1>Bienvenue sur mon Portfolio</h1>
+      <nav>
         <ul>
-          <li>Informatique</li>
-          <li>Jeux vidéo</li>
-          <li>Nourriture</li>
-          <li>Développement web</li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#readme">README</a></li>
         </ul>
-      </article>
-      <article>
-        <h2>Diplômes</h2>
-        <ul>
-          <li class="exp"><span class="annee college">Brevet des collèges</span></li>
-        </ul>
-      </article>
-    </aside>
+      </nav>
+    </header>
 
-    <section>
-      <article>
-        <h2>Présentation</h2>
-        <p>Le web et l’informatique me passionnent, tout comme le hardware (réparation et montage d’ordinateurs, manipulation de composants physiques).</p>
-      </article>
-      <article id="about">
-        <h2>À propos de moi</h2>
-        <p>Je suis étudiant en première année chez Guardia Cybersecurity School, passionné par la création de sites web modernes et interactifs.</p>
-      </article>
-      <article id="projects">
-        <h2>Mes Projets</h2>
-        <p>À compléter…</p>
-      </article>
-      <article id="contact">
-        <h2>Contactez-moi</h2>
-        <p>Vous pouvez me joindre par mail ou téléphone.</p>
-      </article>
+    <main>
+      <aside>
+        <article>
+          <h2>Langues</h2>
+          <p>Français</p>
+        </article>
+        <article>
+          <h2>Centres d’intérêt</h2>
+          <ul>
+            <li>Informatique</li>
+            <li>Jeux vidéo</li>
+            <li>Nourriture</li>
+            <li>Développement web</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Diplômes</h2>
+          <ul>
+            <li class="exp"><span class="annee college">Brevet des collèges</span></li>
+          </ul>
+        </article>
+      </aside>
+
+      <section>
+        <article id="about">
+          <h2>À propos de moi</h2>
+          <p>Je suis étudiant en première année chez Guardia Cybersecurity School, passionné par la création de sites web modernes et interactifs.</p>
+        </article>
+        <article id="projects">
+          <h2>Mes Projets</h2>
+          <p>À compléter…</p>
+        </article>
+        <article id="contact">
+          <h2>Contactez-moi</h2>
+          <p>Vous pouvez me joindre par mail ou téléphone.</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Section README ajoutée -->
+    <section id="readme">
+      <h2>README.md</h2>
+      <pre>
+# Mon Portfolio
+
+Bienvenue sur le dépôt de mon portfolio personnel ! Ce site web est conçu pour présenter mes compétences, mes projets et me permettre d'être contacté.
+
+## Table des matières
+- À propos
+- Fonctionnalités
+- Technologies Utilisées
+- Installation et Utilisation
+- Structure du Projet
+- Contribution
+- Licence
+
+## À propos
+Je suis un étudiant en première année à Guardia Cybersecurity Schools, passionné par la création de sites web modernes et interactifs. Ce portfolio est une vitrine de mes travaux et de mon parcours.
+
+## Fonctionnalités
+- Page d'accueil simple et épurée
+- Section "À propos de moi"
+- Section "Mes Projets"
+- Section "Contactez-moi"
+- Navigation intuitive
+- Design Responsive
+
+## Technologies Utilisées
+- HTML5
+- CSS3
+
+## Installation et Utilisation
+Cloner le dépôt puis ouvrir index.html dans un navigateur.
+
+## Structure du Projet
+- index.html
+- styles.css
+- README.md
+
+## Contribution
+Les contributions sont les bienvenues !
+
+## Licence
+Projet sous licence MIT.
+      </pre>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2023 Mon Portfolio</p>
-  </footer>
+    <footer>
+      <p>© 2025 Mon Portfolio</p>
+    </footer>
+  </div>
 </body>
 </html>
-
-
