@@ -44,6 +44,76 @@ p {
   margin-bottom: 20px;
 }
 
-/* Liste des projets */
+/* Liste des projets sous forme de cartes */
 .project-card {
-  background
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0066cc;
+}
+
+/* Section contact */
+.contact-section {
+  margin-bottom: 20px;
+}
+
+.contact-section h2 {
+  color: #444;
+  margin-bottom: 5px;
+}
+
+/* Formulaire de contact */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 500px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #004999;
+}
+
+/* Footer */
+footer {
+  background-color: #0066cc;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+
