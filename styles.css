@@ -1,51 +1,65 @@
+/* Style global */
 body {
   font-family: Arial, sans-serif;
-  background: #f0f0f0;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px #ccc;
+/* En-têtes */
+h1, h2 {
+  color: #0066cc;
+  margin-bottom: 15px;
 }
 
-header {
-  background: #111;
-  color: #fff;
-  padding: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
+/* Barre de navigation */
+nav {
+  background-color: #0066cc;
+  padding: 12px;
   text-align: center;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: #fff;
+nav a {
+  color: white;
   text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
 }
 
-section {
-  margin: 20px 0;
+/* Sections principales */
+main {
+  padding: 40px;
 }
 
-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Liste des projets */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Section contact */
+.contact-section {
+  margin-bottom: 20px;
+}
+
+.contact-section h2 {
+  color: #444;
+  margin-bottom: 5px;
 }
