@@ -2,22 +2,32 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mes Projets</title>
+  <title>Mes projets</title>
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Sécurité -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 </head>
 <body>
   <header>
-    <h1>Mes Projets</h1>
+    <h1>Mes projets</h1>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="apropos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-      <a href="docs/readme.html">readme</a>
+      <a href="projets.html">Projets</a>
+      <a href="contacteme.html">Contact</a>
     </nav>
   </header>
   <main>
-    <h2>Projets réalisés</h2>
-    <p>Cette section sera mise à jour prochainement.</p>
+    <h2>Liste de mes réalisations</h2>
+    <ul>
+      <li>Projet 1 : Application web sécurisée</li>
+      <li>Projet 2 : Portfolio personnel</li>
+      <li>Projet 3 : Analyse de vulnérabilités avec OWASP ZAP</li>
+    </ul>
   </main>
 </body>
 </html>
