@@ -45,21 +45,5 @@ p {
 }
 
 /* Liste des projets */
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-/* Section contact */
-.contact-section {
-  margin-bottom: 20px;
-}
-
-.contact-section h2 {
-  color: #444;
-  margin-bottom: 5px;
-}
+.project-card {
+  background
