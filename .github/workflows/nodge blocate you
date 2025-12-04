@@ -1,0 +1,29 @@
+// server.js
+const express = require('express');
+const nodemailer = require('nodemailer');
+const app = express();
+
+let codes = {};
+
+app.get('/login', (req, res) => {
+  const email = req.query.email;
+  const code = Math.floor(100000 + Math.random() * 900000); // code à 6 chiffres
+  codes[email] = code;
+
+  // envoi du code par mail
+  let transporter = nodemailer.createTransport({ service: 'gmail', auth: { user: 'tonmail@gmail.com', pass: 'tonmdp' } });
+  transporter.sendMail({ from: 'tonmail@gmail.com', to: email, subject: 'Code de connexion', text: `Votre code est ${code}` });
+
+  res.send('Code envoyé par mail');
+});
+
+app.get('/verify', (req, res) => {
+  const { email, code } = req.query;
+  if (codes[email] == code) {
+    res.send('Connexion réussie');
+  } else {
+    res.send('Code invalide');
+  }
+});
+
+app.listen(3000, () => console.log('Serveur démarré sur http://localhost:3000'));
