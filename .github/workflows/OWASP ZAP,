@@ -1,0 +1,12 @@
+name: Dependabot Security Updates
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # chaque dimanche
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Dependabot
+        uses: dependabot/fetch-metadata@v1
