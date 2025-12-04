@@ -3,16 +3,27 @@ name: Security Scan
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   zap:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Fix permissions
+        run: sudo chmod -R 777 $GITHUB_WORKSPACE
+
       - name: Start local server
         run: |
           python3 -m http.server 8080 &
           sleep 3
+
       - name: OWASP ZAP baseline scan
         uses: zaproxy/action-baseline@v0.9.0
         with:
